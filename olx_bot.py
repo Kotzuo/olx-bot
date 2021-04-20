@@ -1,7 +1,6 @@
 import time
 from os import system
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 from plyer import notification
 import argparse
 import urllib
@@ -42,7 +41,7 @@ if args.state not in valid_states:
     exit()
 
 # Selenium
-chrome_options = Options()
+chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument("--headless")
 chrome_options.add_argument("--window-size=1920,1080")
 chrome_options.add_argument("--disable-gpu")
@@ -52,6 +51,8 @@ chrome_options.add_argument("--disable-in-process-stack-traces")
 chrome_options.add_argument("--disable-logging")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--log-level=3")
+chrome_options.add_argument('--ignore-certificate-errors')
+chrome_options.add_argument('--ignore-ssl-errors')
 
 browser = webdriver.Chrome("./chromedriver.exe", options=chrome_options)
 
