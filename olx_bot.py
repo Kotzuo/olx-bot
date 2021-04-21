@@ -53,6 +53,7 @@ chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--log-level=3")
 chrome_options.add_argument('--ignore-certificate-errors')
 chrome_options.add_argument('--ignore-ssl-errors')
+chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
 browser = webdriver.Chrome("./chromedriver.exe", options=chrome_options)
 
