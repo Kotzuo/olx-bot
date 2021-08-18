@@ -91,7 +91,7 @@ print_with_time(
 
 notification.notify(
     title="Bot OLX rodando!",
-    message="Agora só esperar aparecer novo anúncios automaticamente!",
+    message="Agora só esperar aparecer novos anúncios automaticamente!",
     timeout=10
 )
 
